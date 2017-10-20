@@ -208,7 +208,7 @@ class VkApi {
         // Return full response object, because it 
         // can contain "execute_errors" array which 
         // is important when "execute" method is called.
-        if (method === 'execute' || /^execute\./i.test(method)) {
+        if (method === 'execute' || method.startsWith('execute.')) {
           return response;
         }
 
